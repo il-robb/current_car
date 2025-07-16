@@ -12,6 +12,8 @@ import com.betacom.carjdbc.utilities.SQLManager;
 public class BiciDAO {
 	
 	private SQLManager db = new SQLManager();
+	public VeicoloDAO daoV = new VeicoloDAO();
+	
 	public int insert(String qryName, Object[] parameters) throws Exception{
 		int numero = 0;
 		
@@ -42,6 +44,7 @@ public class BiciDAO {
 		System.out.println("Query:" + qry);
 		
 		numero = db.update(qry, parameters);
+		daoV.delete("veicolo.delete", parameters);
 		
 		return numero;
 	}
