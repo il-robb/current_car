@@ -1,0 +1,215 @@
+package com.betacom.car.models;
+
+public class Alimentazione {
+	
+	private Integer idAlimentazione;
+	private String descrizione;
+	
+	////////////////////////////////////
+	
+	public Alimentazione(Integer idAlimentazione, String descrizione) {
+		super();
+		this.idAlimentazione = idAlimentazione;
+		this.descrizione = descrizione;
+	}
+	
+	////////////////////////////////////
+	
+	public Integer getIdAlimentazione() {
+		return idAlimentazione;
+	}
+	public void setIdAlimentazione(Integer idAlimentazione) {
+		this.idAlimentazione = idAlimentazione;
+	}
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	////////////////////////////////////
+	
+	@Override
+	public String toString() {
+		return "Alimentazione [idAlimentazione=" + idAlimentazione + ", descrizione=" + descrizione + "]";
+	}
+	
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+
+package com.betacom.car.models;
+
+public class Categoria {
+	
+	private Integer idCategoria;
+	private String descrizione;
+	
+	////////////////////////////////////
+	
+	public Categoria(Integer idCategoria, String descrizione) {
+		super();
+		this.idCategoria = idCategoria;
+		this.descrizione = descrizione;
+	}
+	
+	////////////////////////////////////
+	
+	public Integer getIdCategoria() {
+		return idCategoria;
+	}
+	public void setIdCategoria(Integer idAlimentazione) {
+		this.idCategoria = idAlimentazione;
+	}
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	////////////////////////////////////
+	
+	@Override
+	public String toString() {
+		return "Categoria [idCategoria=" + idCategoria + ", descrizione=" + descrizione + "]";
+	}
+	
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+
+package com.betacom.car.models;
+
+public class Colore {
+	
+	private Integer idColore;
+	private String descrizione;
+	private String esadecimale;
+	
+	////////////////////////////////////
+	
+	public Colore(Integer idColore, String descrizione, String esadecimale) {
+		super();
+		this.idColore = idColore;
+		this.descrizione = descrizione;
+		this.esadecimale = esadecimale;
+	}
+
+	////////////////////////////////////
+	
+	public Integer getIdColore() {
+		return idColore;
+	}
+	public void setIdColore(Integer idColore) {
+		this.idColore = idColore;
+	}
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	public String getEsadecimale() {
+		return esadecimale;
+	}
+	public void setEsadecimale(String esadecimale) {
+		this.esadecimale = esadecimale;
+	}
+
+	////////////////////////////////////
+	
+	@Override
+	public String toString() {
+		return "Colore [idColore=" + idColore + ", descrizione=" + descrizione + ", esadecimale=" + esadecimale + "]";
+	}
+	
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+
+package com.betacom.car.models;
+
+public class Sospenzione {
+
+	private Integer idSospensione;
+	private String descrizione;
+	
+	////////////////////////////////////
+	
+	public Sospenzione(Integer idSospensione, String descrizione) {
+		super();
+		this.idSospensione = idSospensione;
+		this.descrizione = descrizione;
+	}
+	
+	////////////////////////////////////
+	
+	public Integer getIdSospensione() {
+		return idSospensione;
+	}
+	public void setIdSospensione(Integer idAlimentazione) {
+		this.idSospensione = idAlimentazione;
+	}
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	////////////////////////////////////
+	
+	@Override
+	public String toString() {
+		return "Sospensione [idSospensione=" + idSospensione + ", descrizione=" + descrizione + "]";
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+
+package com.betacom.car.models;
+
+public class Marca {
+
+	private Integer idMarca;
+	private String descrizione;
+	
+	////////////////////////////////////
+	
+	public Marca(Integer idMarca, String descrizione) {
+		super();
+		this.idMarca = idMarca;
+		this.descrizione = descrizione;
+	}
+
+	////////////////////////////////////
+	
+	public Integer getIdMarca() {
+		return idMarca;
+	}
+	public void setIdMarca(Integer idMarca) {
+		this.idMarca = idMarca;
+	}
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	////////////////////////////////////
+
+	@Override
+	public String toString() {
+		return "Marca [idMarca=" + idMarca + ", descrizione=" + descrizione + "]";
+	}
+
+}
