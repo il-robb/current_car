@@ -14,10 +14,10 @@ public class BiciDAO {
 	private SQLManager db = new SQLManager();
 	public VeicoloDAO daoV = new VeicoloDAO();
 	
-	public int insert(String qryName, Object[] parameters) throws Exception{
+	public int insert( Object[] parameters) throws Exception{
 		int numero = 0;
 		
-		String qry = SQLConfiguration.getInstance().getQuery(qryName);
+		String qry = SQLConfiguration.getInstance().getQuery("bici.insert");
 		System.out.println("Query:" + qry);
 		
 		numero = db.update(qry, parameters, true);
@@ -25,10 +25,10 @@ public class BiciDAO {
 		return numero;
 	}
 
-	public int update(String qryName, Object[] parameters) throws Exception{
+	public int update(Object[] parameters) throws Exception{
 		int numero = 0;
 		
-		String qry = SQLConfiguration.getInstance().getQuery(qryName);
+		String qry = SQLConfiguration.getInstance().getQuery("bici.update");
 		System.out.println("Query:" + qry);
 		
 		numero = db.update(qry, parameters);
@@ -37,14 +37,14 @@ public class BiciDAO {
 	}
 
 	
-	public int delete(String qryName, Object[] parameters) throws Exception{
+	public int delete(Object[] parameters) throws Exception{
 		int numero = 0;
 		
-		String qry = SQLConfiguration.getInstance().getQuery(qryName);
+		String qry = SQLConfiguration.getInstance().getQuery("bici.delete");
 		System.out.println("Query:" + qry);
 		
 		numero = db.update(qry, parameters);
-		daoV.delete("veicolo.delete", parameters);
+		daoV.delete(parameters);
 		
 		return numero;
 	}

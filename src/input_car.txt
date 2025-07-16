@@ -1,0 +1,5 @@
+add:macchina,4,benzina,strada,bianca,renault,2024,Clio,3,EL123GZ,1200
+update:macchina,1,alim=benzina,colore=rosso
+add:moto,2,benzina,strada,bianca,Yamaha,2021,R1,EL22239,900
+delete:moto,2
+list
