@@ -1,0 +1,13 @@
+# esempio d'input
+# codice operazione : add, update, delete, list
+# add : genera insert -> deve contenere tutti dati per creare un veicolo + insert nella tabella di macchine o moto o bici
+# update : per gestire l'update -> il primo campo sarà l'id della tabella veicolo da modificare , 
+#			poi dopo i campi da modificare per esempio colore=rosso
+# delete : contiene solo l'id della tabelle veicolo. Non dimenticare di cancellare anche sulla tabella macchina o  moto o bici
+
+   Esempio d'input
+add:macchina,4,benzina,strada,bianca,renault,2024,Clio,3,EL123GZ,1200
+update:macchina,1,alim=benzina,colore=rosso
+add:moto,2,benzina,strada,bianca,Yamaha,2021,R1,EL22239,900
+delete:moto,2
+list
