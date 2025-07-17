@@ -23,23 +23,23 @@ public class VeicoloDAO {
 		
 		
 		numero = db.update(qry, paramsV,true);
+		System.out.println("insert veicolo ok "+numero);
 		
-		Object[] paramsM = new Object[4];
-		paramsM[0]=numero;
-		
+		paramsS[0]=numero;
+		System.out.println(paramsS.toString());
 		switch (paramsV[0].toString()){
 		case "moto": {
-			daoMo.insert(paramsM);
+			daoMo.insert(paramsS);
 			break;
 		}
 		case "macchina": {
 			
-			daoM.insert(paramsM);
+			daoM.insert(paramsS);
 			break;
 		}
 		case "bici": {
 		
-			daoB.insert(paramsM);
+			daoB.insert(paramsS);
 			break;
 		}
 		default:
@@ -53,6 +53,23 @@ public class VeicoloDAO {
 	public int delete(Object[] parameters) throws Exception{
 		int numero = 0;
 		
+		switch (parameters[0].toString()) {
+		case "moto": {
+			daoMo.delete(new Object[] {parameters[1]});
+			break;
+		}
+		case "macchina": {
+			daoM.delete(new Object[] {parameters[1]});
+			break;
+		}
+		case "bici": {
+			daoB.delete(new Object[] {parameters[1]});
+			break;
+		}
+		default:
+			throw new IllegalArgumentException("Unexpected veicolo: " + parameters[1]);
+		}
+		
 		String qry = SQLConfiguration.getInstance().getQuery("veicolo.delete");
 		System.out.println("Query:" + qry);
 		
@@ -62,13 +79,13 @@ public class VeicoloDAO {
 	}
 	
 	
-	public int update(String qryName,Object[] parameters) throws Exception{
+	public int update(Object[] parameters) throws Exception{
 		int numero = 0;
 		
-		String qry = SQLConfiguration.getInstance().getQuery(qryName);
+		String qry = SQLConfiguration.getInstance().getQuery("veicolo.update");
 		System.out.println("Query:" + qry);
 		
-		numero = db.update(qry, parameters);
+		numero = db.update(qry , parameters);
 		
 		return numero;
 	}

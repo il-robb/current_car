@@ -11,7 +11,6 @@ import com.betacom.car.utilities.SQLManager;
 
 public class MacchinaDAO {
 	private SQLManager db = new SQLManager();
-	private VeicoloDAO daoV = new VeicoloDAO();
 	
 	public int insert(Object[] parameters) throws Exception{
 		int numero = 0;
@@ -20,7 +19,7 @@ public class MacchinaDAO {
 		System.out.println("Query:" + qry);
 		
 		numero = db.update(qry, parameters,true);
-		
+		System.out.println("insert macchina ok "+numero);
 		return numero;
 	}
 	
@@ -31,7 +30,6 @@ public class MacchinaDAO {
 		System.out.println("Query:" + qry);
 		
 		numero = db.update(qry, parameters);
-		daoV.delete(parameters);
 		
 		return numero;
 	}
@@ -48,7 +46,7 @@ public class MacchinaDAO {
 	
 	public List<Macchina> findAll() throws Exception{
 		
-		String qry = SQLConfiguration.getInstance().getQuery("clienti");
+		String qry = SQLConfiguration.getInstance().getQuery("macchina");
 		System.out.println("Query:" + qry);
 		
 		List<Map<String, Object>> lD = db.list(qry);
@@ -66,7 +64,7 @@ public class MacchinaDAO {
 	
 	public Optional<Macchina>   findById(Object[] parameters) throws Exception{
 		
-		String qry = SQLConfiguration.getInstance().getQuery("clienti.byId");
+		String qry = SQLConfiguration.getInstance().getQuery("macchina.byId");
 		System.out.println("Query:" + qry);
 		
 		Map<String, Object> row = db.get(qry, parameters);

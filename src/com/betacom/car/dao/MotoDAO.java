@@ -10,7 +10,6 @@ import com.betacom.car.utilities.SQLManager;
 
 public class MotoDAO {
 	private SQLManager db = new SQLManager();
-	private VeicoloDAO daoV = new VeicoloDAO();
 	
 	public int insert(Object[] parameters) throws Exception{
 		int numero = 0;
@@ -19,7 +18,7 @@ public class MotoDAO {
 		System.out.println("Query:" + qry);
 		
 		numero = db.update(qry, parameters,true);
-		
+		System.out.println("insert moto ok "+numero);
 		return numero;
 	}
 	
@@ -31,14 +30,13 @@ public class MotoDAO {
 		
 		numero = db.update(qry, parameters);
 		
-		daoV.delete(parameters);
 		
 		return numero;
 	}
-	public int update(String qryName,Object[] parameters) throws Exception{
+	public int update(Object[] parameters) throws Exception{
 		int numero = 0;
 		
-		String qry = SQLConfiguration.getInstance().getQuery(qryName);
+		String qry = SQLConfiguration.getInstance().getQuery("moto.insert");
 		System.out.println("Query:" + qry);
 		
 		numero = db.update(qry, parameters);
