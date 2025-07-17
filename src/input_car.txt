@@ -1,3 +1,1 @@
-add:macchina,2,benzina,strada,bianco,Yamaha,2021,R1,4,EL22239,900
-add:macchina,2,benzina,strada,bianco,Yamaha,2021,R1,4,EL22230,900
-delete:moto,1
+update:bici,8,id_alimentazione=elettrica,id_categoria=fuoristrada,id_colore=nero,n_marce=8,id_sospensione=mono

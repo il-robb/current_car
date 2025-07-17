@@ -5,14 +5,14 @@ public class Veicolo {
 	private int idVeicolo;
 	private String tipoVeicolo; //macchina, moto, bici
 	private int numeroRuote;
-	private int idAlimentazione;
-	private int idCategoria;
+	private String idAlimentazione;
+	private String idCategoria;
 	private int idColore;
 	private int idMarca;
 	private int annoProduzione;
 	private String modello;
 	
-	public Veicolo(int idVeicolo, String tipoVeicolo, int numeroRuote, int idAlimentazione, int idCategoria,
+	public Veicolo(int idVeicolo, String tipoVeicolo, int numeroRuote, String idAlimentazione, String idCategoria,
 			int idColore, int idMarca, int annoProduzione, String modello) {
 		super();
 		this.idVeicolo = idVeicolo;
@@ -47,17 +47,17 @@ public class Veicolo {
 		this.numeroRuote = numeroRuote;
 	}
 
-	public int getIdAlimentazione() {
+	public String getIdAlimentazione() {
 		return idAlimentazione;
 	}
-	public void setIdAlimentazione(int idAlimentazione) {
+	public void setIdAlimentazione(String idAlimentazione) {
 		this.idAlimentazione = idAlimentazione;
 	}
 
-	public int getIdCategoria() {
+	public String getIdCategoria() {
 		return idCategoria;
 	}
-	public void setIdCategoria(int idCategoria) {
+	public void setIdCategoria(String idCategoria) {
 		this.idCategoria = idCategoria;
 	}
 

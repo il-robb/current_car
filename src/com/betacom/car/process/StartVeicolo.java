@@ -1,12 +1,16 @@
 package com.betacom.car.process;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.betacom.car.dao.BiciDAO;
 import com.betacom.car.dao.MacchinaDAO;
 import com.betacom.car.dao.MotoDAO;
 import com.betacom.car.dao.VeicoloDAO;
 import com.betacom.car.exception.AcademyException;
+import com.betacom.car.models.Veicolo;
 import com.betacom.car.singletone.SQLConfiguration;
 import com.betacom.car.utilities.SQLManager;
 
@@ -38,6 +42,10 @@ public class StartVeicolo {
 	public final static int PARAM_MAC = 11;
 	public final static int PARAM_MOTO = 10;
 	public final static int PARAM_BICI = 11;
+//	NUMERO PER VEICOLO
+	public final static int MACCHINA=2;
+	public final static int MOTO=2;
+	public final static int BICI=2;
 	
 	private BiciDAO daoB = new BiciDAO();
 	private MotoDAO daomoto = new MotoDAO();
@@ -53,98 +61,30 @@ public class StartVeicolo {
 			String qry;
 			for(String inp:params) {
 				String[] oper = inp.split(":");
-				Object[] params1 = oper[1].split(",");
+				
 				switch (oper[0]) {
 				case "add": {
-
-					Object[] paramsV = new Object[8];
-					Object[] paramsM = new Object[4];
-					int k=1;
-
-					for(int i = 0;i<8;i++)
-					{
-						paramsV[i]= params1[i];
-					}
-					
-					switch (paramsV[0].toString()){
-					case "moto": {
-						
-						for(int i = 8;i<10;i++)
-						{
-							System.out.println(params1[i].toString());
-							paramsM[k]= params1[i];
-							System.out.println(paramsM[k].toString());
-							k++;
-						}
-						
-						break;
-					}
-					case "macchina": {
-						
-						for(int i = 8;i<11;i++)
-						{
-							paramsM[k]= params1[i];
-							k++;
-						}
-						
-						break;
-					}
-					case "bici": {
-					
-					for(int i = 8;i<11;i++)
-					{
-						paramsM[k]= params1[i];
-						k++;
-					}
-						qry = SQLConfiguration.getInstance().getQuery("sospensione.getId");
-			            paramsV[TIPO_SOSPENSIONE]=  db.get(qry,new Object[] {paramsV[TIPO_SOSPENSIONE].toString()}).get("id_sospensione");
-			            
-			           
-						break;
-					}
-					default:
-						throw new IllegalArgumentException("Unexpected value: " + paramsV[0].toString());
-					}
-					
-					qry = SQLConfiguration.getInstance().getQuery("alimentazione.getId");
-		            paramsV[TIPO_ALIMENTAZIONE]=  db.get(qry,new Object[] {paramsV[TIPO_ALIMENTAZIONE].toString()}).get("id_alimentazione");
-		            System.out.println("alim ok");
-		            qry = SQLConfiguration.getInstance().getQuery("categoria.getId");
-		            paramsV[CATEGORIA]=  db.get(qry,new Object[] {paramsV[CATEGORIA].toString()}).get("id_categoria");
-		            System.out.println("categoria ok");
-		            qry = SQLConfiguration.getInstance().getQuery("colore.getId");
-		            paramsV[COLORE]=  db.get(qry,new Object[] {paramsV[COLORE].toString()}).get("id_colore");
-		            System.out.println("colore ok");
-		            qry = SQLConfiguration.getInstance().getQuery("marca.getId");
-		            paramsV[MARCA]=  db.get(qry,new Object[] {paramsV[MARCA].toString()}).get("id_marca");
-		            System.out.println("marca ok");
-		            
-		            daoV.insert(paramsV, paramsM);
+					Object[] params1 = oper[1].split(",");
+					List<Object[]> l = add(params1,db);
+		            daoV.insert(l.get(0), l.get(1));
+		            break;
 					
 				}
 				case "update": {
-					switch (params1[0].toString()) {
-					case "moto": {
-						daomoto.update(new Object[] {params1[1]});
-					}
-					case "macchina": {
-						daoM.update(new Object[] {params1[1]});
-					}
-					case "bici": {
-						daoB.update(new Object[] {params1[1]});
-					}
-					default:
-						throw new IllegalArgumentException("Unexpected veicolo: " + params1[1]);
-					}
+					Object[] params1 = oper[1].split(",");
+					update(params1,db);
+					
 				}
 				case "delete": {
-					
+					Object[] params1 = oper[1].split(",");
 					daoV.delete(params1);
-					
+					break;
 					
 				}
 				case "list": {
-					
+					List<Veicolo> lV = daoV.findAll();
+                    System.out.println(lV);
+					break;
 				}
 					
 				default:
@@ -167,8 +107,180 @@ public class StartVeicolo {
 		System.out.println("Connection is closed....");
 		return rc;
 	}
+	
+	private List<Object[]>add(Object[] params1,SQLManager db)
+	{
+		Object[] paramsV = new Object[8];
+		Object[] paramsM = new Object[4];
+		String qry;
+		int k=1;
+		try {
+		
+			for(int i = 0;i<8;i++)
+			{
+				paramsV[i]= params1[i];
+			}
+			
+			switch (paramsV[0].toString()){
+			case "moto": {
+				
+				for(int i = 8;i<10;i++)
+				{
+					System.out.println(params1[i].toString());
+					paramsM[k]= params1[i];
+					k++;
+				}
+				break;
+			}
+			case "macchina": {
+				for(int i = 8;i<11;i++)
+				{
+					paramsM[k]= params1[i];
+					k++;
+				}
+				break;
+			}
+			case "bici": {
+			
+			for(int i = 8;i<11;i++)
+			{
+				paramsM[k]= params1[i];
+				k++;
+			}
+				if(paramsM[PIEGHEVOLE].equals("true"))paramsM[PIEGHEVOLE]=1;else paramsM[PIEGHEVOLE]=0;
+				qry = SQLConfiguration.getInstance().getQuery("sospensione.getId");
+	            paramsM[TIPO_SOSPENSIONE]=  db.get(qry,new Object[] {paramsM[TIPO_SOSPENSIONE].toString()}).get("id_sospensione");
+	            System.out.println(paramsM[2]);
+	           
+				break;
+			}
+			default:
+				throw new IllegalArgumentException("Unexpected value: " + paramsV[0].toString());
+			}
+			System.out.println("pre");
+			qry = SQLConfiguration.getInstance().getQuery("tipo_veicolo.getId");
+			System.out.println("query "+qry);
+			
+			
+	        Object pattern=  db.get(qry,new Object[] {paramsV[TIPO_VEICOLO].toString()}).get("pattern");
+	        paramsV[TIPO_VEICOLO]=  db.get(qry,new Object[] {paramsV[TIPO_VEICOLO].toString()}).get("tipo");
+			qry = SQLConfiguration.getInstance().getQuery("alimentazione.getId");
+	        paramsV[TIPO_ALIMENTAZIONE]=  db.get(qry,new Object[] {paramsV[TIPO_ALIMENTAZIONE].toString(),pattern}).get("id_alimentazione");
+	        qry = SQLConfiguration.getInstance().getQuery("categoria.getId");
+	        paramsV[CATEGORIA]=  db.get(qry,new Object[] {paramsV[CATEGORIA].toString(),pattern}).get("id_categoria");
+	        qry = SQLConfiguration.getInstance().getQuery("colore.getId");
+	        paramsV[COLORE]=  db.get(qry,new Object[] {paramsV[COLORE].toString()}).get("id_colore");
+	        qry = SQLConfiguration.getInstance().getQuery("marca.getId");
+	        paramsV[MARCA]=  db.get(qry,new Object[] {paramsV[MARCA].toString()}).get("id_marca");
+			} 
+		catch (Exception e) {
+			System.out.println(e.getLocalizedMessage());
+		}
+		List<Object[]> l = new ArrayList<Object[]>();
+		l.add(paramsV);
+		l.add(paramsM);
+		
+		return l;
+        
+	}
+	
+	private void update(Object[] params1,SQLManager db) throws Exception
+	{
+		Map<String,Object> mapM = new HashMap<String, Object>();
+		String qry = SQLConfiguration.getInstance().getQuery("veicolo.byId");
+		
+		Map<String,Object> mapV = db.get(qry,new Object[] {params1[1]});
+		
+		for(int i=0;i<params1.length;i++)System.out.println(params1[i].toString());
+		
+		switch (params1[0].toString()) {
+		case "moto": {
+			qry = SQLConfiguration.getInstance().getQuery("moto.byId");
+			mapM = db.get(qry,new Object[] {params1[1]});
+			break;
+		}
+		case "macchina": {
+			qry = SQLConfiguration.getInstance().getQuery("macchina.byId");
+			mapM = db.get(qry,new Object[] {params1[1]});
+			break;
+		}
+		case "bici": {
+			qry = SQLConfiguration.getInstance().getQuery("bici.byId");
+			mapM = db.get(qry,new Object[] {params1[1]});
+			break;
+		}
+		default:
+			throw new IllegalArgumentException("Unexpected veicolo: " + params1[1]);
+		}
+		
+		for(int i=2;i<params1.length;i++)
+		{
+			String key = params1[1].toString().split("=")[0] ;
+			Object value = params1[1].toString().split("=")[1] ;
+			System.out.println("chiave "+key+ " valore "+value.toString());
+			qry = SQLConfiguration.getInstance().getQuery("pattern_tipo_veicolo.getId");
+			Object pattern=  db.get(qry,new Object[] {mapV.get("tipo_veicolo").toString()}).get("pattern");
+			
+			if(mapV.get(key)!= null)
+			{
+				if(key.equals("id_alimentazione"))
+				{
+					qry = SQLConfiguration.getInstance().getQuery("alimentazione.getId");
+					mapV.put(key,   db.get(qry,new Object[] {value.toString(),pattern}).get("id_alimentazione"));
+				}
+				else if(key.equals("id_categoria"))
+				{
+					qry = SQLConfiguration.getInstance().getQuery("categoria.getId");
+					mapV.put(key,db.get(qry,new Object[] {value.toString(),pattern}).get("id_categoria"));
+				}
+				else if(key.equals("id_colore"))
+				{
+					qry = SQLConfiguration.getInstance().getQuery("colore.getId");
+					mapV.put(key,db.get(qry,new Object[] {value.toString(),pattern}).get("id_colore"));
+				}
+				else if(key.equals("id_marca"))
+				{
+					qry = SQLConfiguration.getInstance().getQuery("marca.getId");
+					mapV.put(key,db.get(qry,new Object[] {value.toString(),pattern}).get("id_marca"));
+				}
+				else mapV.put(key, value);
+			}
+			else if(mapM.get(key)!= null)
+				{
+				if(key.equals("id_sospensione"))
+				{
+					qry = SQLConfiguration.getInstance().getQuery("sospensione.getId");
+					mapV.put(key,   db.get(qry,new Object[] {value.toString(),pattern}).get("id_sospensione"));
+				}
+					mapM.put(key, value);
+				}
+				else {
+					System.out.println("valore "+value.toString() + " di "+key+" non è valido");
+					return ;
+				}
+			daoV.update(mapV.values().toArray());
+			switch (params1[0].toString()) {
+			case "moto": {
+				daomoto.update(mapM.values().toArray());
+				break;
+			}
+			case "macchina": {
+				daoM.update(mapM.values().toArray());
+				break;
+			}
+			case "bici": {
+				daoB.update(mapM.values().toArray());
+				break;
+			}
+			default:
+				throw new IllegalArgumentException("Unexpected veicolo: " + params1[1]);
+			}
+		}
 		
 		
+		
+		
+	}
 		
 		
 		

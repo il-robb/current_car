@@ -2,12 +2,12 @@ package com.betacom.car.models;
 
 public class Categoria {
 	
-	private Integer idCategoria;
+	private String idCategoria;
 	private String descrizione;
 	
 	////////////////////////////////////
 	
-	public Categoria(Integer idCategoria, String descrizione) {
+	public Categoria(String idCategoria, String descrizione) {
 		super();
 		this.idCategoria = idCategoria;
 		this.descrizione = descrizione;
@@ -15,10 +15,10 @@ public class Categoria {
 	
 	////////////////////////////////////
 	
-	public Integer getIdCategoria() {
+	public String getIdCategoria() {
 		return idCategoria;
 	}
-	public void setIdCategoria(Integer idAlimentazione) {
+	public void setIdCategoria(String idAlimentazione) {
 		this.idCategoria = idAlimentazione;
 	}
 

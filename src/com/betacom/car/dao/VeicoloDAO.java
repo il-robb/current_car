@@ -23,21 +23,22 @@ public class VeicoloDAO {
 		
 		
 		numero = db.update(qry, paramsV,true);
+		
 		System.out.println("insert veicolo ok "+numero);
 		
 		paramsS[0]=numero;
-		System.out.println(paramsS.toString());
-		switch (paramsV[0].toString()){
-		case "moto": {
+		
+		switch (Integer.parseInt(paramsV[0].toString())){
+		case 2: {
 			daoMo.insert(paramsS);
 			break;
 		}
-		case "macchina": {
+		case 1: {
 			
 			daoM.insert(paramsS);
 			break;
 		}
-		case "bici": {
+		case 3: {
 		
 			daoB.insert(paramsS);
 			break;
@@ -53,16 +54,16 @@ public class VeicoloDAO {
 	public int delete(Object[] parameters) throws Exception{
 		int numero = 0;
 		
-		switch (parameters[0].toString()) {
-		case "moto": {
+		switch (Integer.parseInt(parameters[0].toString())) {
+		case 2: {//moto
 			daoMo.delete(new Object[] {parameters[1]});
 			break;
 		}
-		case "macchina": {
+		case 1: {//macchina
 			daoM.delete(new Object[] {parameters[1]});
 			break;
 		}
-		case "bici": {
+		case 3: {//bici
 			daoB.delete(new Object[] {parameters[1]});
 			break;
 		}
@@ -73,7 +74,7 @@ public class VeicoloDAO {
 		String qry = SQLConfiguration.getInstance().getQuery("veicolo.delete");
 		System.out.println("Query:" + qry);
 		
-		numero = db.update(qry, parameters);
+		numero = db.update(qry,new Object[] {parameters[1]});
 		
 		return numero;
 	}
@@ -102,8 +103,8 @@ public class VeicoloDAO {
 						(Integer)row.get("id_veicolo"), 
 						(String)row.get("tipo_veicolo"), 
 						(Integer)row.get("numero_ruote"),
-						(Integer)row.get("id_alimentazione"),
-						(Integer)row.get("id_categoria"),
+						(String)row.get("id_alimentazione"),
+						(String)row.get("id_categoria"),
 						(Integer)row.get("id_colore"),
 						(Integer)row.get("id_marca"),
 						(Integer)row.get("anno_prod"),
@@ -124,8 +125,8 @@ public Optional<Veicolo>   findById(Object[] parameters) throws Exception{
 				(Integer)row.get("id_veicolo"), 
 				(String)row.get("tipo_veicolo"), 
 				(Integer)row.get("numero_ruote"),
-				(Integer)row.get("id_alimentazione"),
-				(Integer)row.get("id_categoria"),
+				(String)row.get("id_alimentazione"),
+				(String)row.get("id_categoria"),
 				(Integer)row.get("id_colore"),
 				(Integer)row.get("id_marca"),
 				(Integer)row.get("anno_prod"),

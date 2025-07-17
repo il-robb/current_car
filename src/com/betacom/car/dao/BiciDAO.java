@@ -19,7 +19,7 @@ public class BiciDAO {
 		System.out.println("Query:" + qry);
 		
 		numero = db.update(qry, parameters,true);
-		System.out.println("insert moto ok "+numero);
+		System.out.println("insert bici ok "+numero);
 		
 		return numero;
 	}
