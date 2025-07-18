@@ -48,8 +48,8 @@ public class Moto {
 	
 	@Override
 	public String toString() {
-		return "id_moto=" + id_moto + ", id_veicolo=" + id_veicolo + ", targa=" + targa + ", cilindrata="
-				+ cilindrata + "]";
+		return "idMoto=" + id_moto + ", idVeicolo=" + id_veicolo + ", targa=" + targa + ", cilindrata="
+				+ cilindrata ;
 	}
 	
 	
