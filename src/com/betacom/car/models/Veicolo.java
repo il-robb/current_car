@@ -1,0 +1,100 @@
+package com.betacom.car.models;
+
+public class Veicolo {
+ 
+	private int idVeicolo;
+	private String tipoVeicolo; //macchina, moto, bici
+	private int numeroRuote;
+	private String idAlimentazione;
+	private String idCategoria;
+	private String idColore;
+	private String idMarca;
+	private String annoProduzione;
+	private String modello;
+	
+	public Veicolo(int idVeicolo, String tipoVeicolo, int numeroRuote, String idAlimentazione, String idCategoria,
+			String idColore, String idMarca, String annoProduzione, String modello) {
+		super();
+		this.idVeicolo = idVeicolo;
+		this.tipoVeicolo = tipoVeicolo;
+		this.numeroRuote = numeroRuote;
+		this.idAlimentazione = idAlimentazione;
+		this.idCategoria = idCategoria;
+		this.idColore = idColore;
+		this.idMarca = idMarca;
+		this.annoProduzione = annoProduzione;
+		this.modello = modello;
+	}
+
+	public int getIdVeicolo() {
+		return idVeicolo;
+	}
+	public void setIdVeicolo(int idVeicolo) {
+		this.idVeicolo = idVeicolo;
+	}
+
+	public String getTipoVeicolo() {
+		return tipoVeicolo;
+	}
+	public void setTipoVeicolo(String tipoVeicolo) {
+		this.tipoVeicolo = tipoVeicolo;
+	}
+
+	public int getNumeroRuote() {
+		return numeroRuote;
+	}
+	public void setNumeroRuote(int numeroRuote) {
+		this.numeroRuote = numeroRuote;
+	}
+
+	public String getIdAlimentazione() {
+		return idAlimentazione;
+	}
+	public void setIdAlimentazione(String idAlimentazione) {
+		this.idAlimentazione = idAlimentazione;
+	}
+
+	public String getIdCategoria() {
+		return idCategoria;
+	}
+	public void setIdCategoria(String idCategoria) {
+		this.idCategoria = idCategoria;
+	}
+
+	public String getIdColore() {
+		return idColore;
+	}
+	public void setIdColore(String idColore) {
+		this.idColore = idColore;
+	}
+
+	public String getIdMarca() {
+		return idMarca;
+	}
+	public void setIdMarca(String idMarca) {
+		this.idMarca = idMarca;
+	}
+
+	public String getAnnoProduzione() {
+		return annoProduzione;
+	}
+	public void setAnnoProduzione(String annoProduzione) {
+		this.annoProduzione = annoProduzione;
+	}
+
+	public String getModello() {
+		return modello;
+	}
+	public void setModello(String modello) {
+		this.modello = modello;
+	}
+	
+	@Override
+	public String toString() {
+		return "idVeicolo=" + idVeicolo + ", tipoVeicolo=" + tipoVeicolo + ", numeroRuote=" + numeroRuote
+				+ ", tipoAlimentazione=" + idAlimentazione + ", tipoCategoria=" + idCategoria + ", Colore=" + idColore
+				+ ", Marca=" + idMarca + ", annoProduzione=" + annoProduzione + ", modello=" + modello;
+	}
+	
+	
+}
