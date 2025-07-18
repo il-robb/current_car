@@ -73,6 +73,7 @@ public class StartVeicolo {
 				case "update": {
 					Object[] params1 = oper[1].split(",");
 					update(params1,db);
+					break;
 					
 				}
 				case "delete": {
@@ -188,6 +189,10 @@ public class StartVeicolo {
 	{
 		Map<String,Object> mapM = new HashMap<String, Object>();
 		String qry = SQLConfiguration.getInstance().getQuery("veicolo.byId");
+		String qryV = "";
+		String qryM = "";
+		int trigV=0;
+		int trigM=0;
 		
 		Map<String,Object> mapV = db.get(qry,new Object[] {params1[1]});
 		
@@ -215,67 +220,90 @@ public class StartVeicolo {
 		
 		for(int i=2;i<params1.length;i++)
 		{
-			String key = params1[1].toString().split("=")[0] ;
-			Object value = params1[1].toString().split("=")[1] ;
+			String key = params1[i].toString().split("=")[0] ;
+			Object value = params1[i].toString().split("=")[1] ;
+			
 			System.out.println("chiave "+key+ " valore "+value.toString());
+			
 			qry = SQLConfiguration.getInstance().getQuery("pattern_tipo_veicolo.getId");
 			Object pattern=  db.get(qry,new Object[] {mapV.get("tipo_veicolo").toString()}).get("pattern");
 			
-			if(mapV.get(key)!= null)
-			{
+			if(mapV.containsKey(key))
+			{	
+				if(trigV==1)qryV=qryV+", ";
+				else trigV++;
+				
 				if(key.equals("id_alimentazione"))
 				{
 					qry = SQLConfiguration.getInstance().getQuery("alimentazione.getId");
-					mapV.put(key,   db.get(qry,new Object[] {value.toString(),pattern}).get("id_alimentazione"));
+					qryV = qryV +key+ "= \""+ db.get(qry,new Object[] {value.toString(),pattern}).get("id_alimentazione")+"\"";
 				}
 				else if(key.equals("id_categoria"))
 				{
 					qry = SQLConfiguration.getInstance().getQuery("categoria.getId");
-					mapV.put(key,db.get(qry,new Object[] {value.toString(),pattern}).get("id_categoria"));
+					qryV = qryV +key+ "=\""+ db.get(qry,new Object[] {value.toString(),pattern}).get("id_categoria")+"\"";
 				}
 				else if(key.equals("id_colore"))
 				{
 					qry = SQLConfiguration.getInstance().getQuery("colore.getId");
-					mapV.put(key,db.get(qry,new Object[] {value.toString(),pattern}).get("id_colore"));
+					qryV = qryV +key+ "=\""+ db.get(qry,new Object[] {value.toString()}).get("id_colore")+"\"";
 				}
 				else if(key.equals("id_marca"))
 				{
 					qry = SQLConfiguration.getInstance().getQuery("marca.getId");
-					mapV.put(key,db.get(qry,new Object[] {value.toString(),pattern}).get("id_marca"));
+					qryV = qryV +key+ "=\""+ db.get(qry,new Object[] {value.toString()}).get("id_marca")+"\"";
 				}
-				else mapV.put(key, value);
+				else qryV = qryV +key+ "=\""+ value+"\"";
 			}
-			else if(mapM.get(key)!= null)
+			else if(mapM.containsKey(key))
 				{
+				if(trigM==1)qryM=qryM+", ";
+				else trigM++;
 				if(key.equals("id_sospensione"))
 				{
 					qry = SQLConfiguration.getInstance().getQuery("sospensione.getId");
-					mapV.put(key,   db.get(qry,new Object[] {value.toString(),pattern}).get("id_sospensione"));
+					qryM = qryM +key+ "=\""+ db.get(qry,new Object[] {value.toString()}).get("id_sospensione")+"\"";
 				}
-					mapM.put(key, value);
+				else qryM = qryM +key+ "=\""+ value+"\"";
 				}
 				else {
 					System.out.println("valore "+value.toString() + " di "+key+" non è valido");
 					return ;
 				}
-			daoV.update(mapV.values().toArray());
+		}
+		
+			if(qryV!="") {
+				qryV="update veicolo set "+qryV + " where id_veicolo= "+params1[1];
+				System.out.println(qryV);
+				System.out.println(qryM);
+				db.update(qryV,new Object[] {});
+			}
+			
+			System.out.println(qryM);
 			switch (params1[0].toString()) {
 			case "moto": {
-				daomoto.update(mapM.values().toArray());
+				if(qryM!="") {
+					qryM="update moto set "+qryM + " where id_veicolo= "+params1[1];}
+					
 				break;
 			}
 			case "macchina": {
-				daoM.update(mapM.values().toArray());
+				if(qryM!="") {
+				qryM="update moto set "+qryM + " where id_veicolo= "+params1[1];}
+				
 				break;
 			}
 			case "bici": {
-				daoB.update(mapM.values().toArray());
+				if(qryM!="") {
+				qryM="update bici set "+qryM + " where id_veicolo= "+params1[1];
+				}
 				break;
 			}
 			default:
 				throw new IllegalArgumentException("Unexpected veicolo: " + params1[1]);
 			}
-		}
+			System.out.println(qryM);
+			db.update(qryM,new Object[] {});
 		
 		
 		

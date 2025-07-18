@@ -1,1 +1,5 @@
-update:bici,8,id_alimentazione=elettrica,id_categoria=fuoristrada,id_colore=nero,n_marce=8,id_sospensione=mono
+add:moto,2,benzina,strada,bianca,Yamaha,2021,R1,EL22239,900
+add:macchina,4,benzina,strada,bianca,Yamaha,2021,R1,4,EL22240,900
+add:macchina,4,benzina,strada,bianca,Yamaha,2021,R1,4,900,true
+update:macchina,1,alim=benzina,colore=rosso
+delete:moto,2

@@ -33,10 +33,10 @@ public class MacchinaDAO {
 		
 		return numero;
 	}
-	public int update(Object[] parameters) throws Exception{
+	public int update(String qryname,Object[] parameters) throws Exception{
 		int numero = 0;
 		
-		String qry = SQLConfiguration.getInstance().getQuery("macchina.update");
+		String qry = SQLConfiguration.getInstance().getQuery(qryname);
 		System.out.println("Query:" + qry);
 		
 		numero = db.update(qry, parameters);
