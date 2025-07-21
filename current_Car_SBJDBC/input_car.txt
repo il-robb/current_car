@@ -1,0 +1,1 @@
+add:macchina,4,benzina,strada,bianca,renault,2000,clio,3,gg111gg,900
