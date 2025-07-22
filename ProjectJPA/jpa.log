@@ -1,0 +1,944 @@
+2025-07-22T12:54:16.469+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 13800 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T12:54:16.472+02:00 DEBUG 13800 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T12:54:16.474+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T12:54:16.544+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T12:54:17.542+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T12:54:17.663+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 1 JPA repository interface.
+2025-07-22T12:54:18.561+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T12:54:19.258+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@887ad06
+2025-07-22T12:54:19.262+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T12:54:19.360+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T12:54:19.501+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T12:54:19.605+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T12:54:20.252+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T12:54:20.487+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T12:54:21.993+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T12:54:22.036+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T12:54:22.658+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T12:54:22.716+02:00  INFO 13800 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 7.119 seconds (process running for 9.124)
+2025-07-22T12:54:22.724+02:00 DEBUG 13800 --- [ProjectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, cognome=Saporiti, nome=Luca, codiceFiscale=LSP345SPA, email=l.sapo@proton.me)
+2025-07-22T12:54:22.926+02:00  INFO 13800 --- [ProjectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T12:54:22.930+02:00  INFO 13800 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T12:54:22.964+02:00  INFO 13800 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T12:56:01.528+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 13964 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T12:56:01.531+02:00 DEBUG 13964 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T12:56:01.533+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T12:56:01.658+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T12:56:02.543+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T12:56:02.641+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interface.
+2025-07-22T12:56:03.303+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T12:56:04.047+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18d7592d
+2025-07-22T12:56:04.051+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T12:56:04.150+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T12:56:04.283+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T12:56:04.381+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T12:56:04.942+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T12:56:05.124+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T12:56:06.629+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T12:56:06.673+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T12:56:07.455+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T12:56:07.491+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 7.063 seconds (process running for 9.344)
+2025-07-22T12:56:07.498+02:00 DEBUG 13964 --- [ProjectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, cognome=Saporiti, nome=Luca, codiceFiscale=LSP345SPA, email=l.sapo@proton.me)
+2025-07-22T12:56:08.306+02:00  WARN 13964 --- [ProjectJPA] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2025-07-22T12:56:08.307+02:00 ERROR 13964 --- [ProjectJPA] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'LSP345SPA' for key 'socio.UKtox6grm7ohkl1mrr70yb2fyan'
+2025-07-22T12:56:08.327+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-22T12:56:08.371+02:00 ERROR 13964 --- [ProjectJPA] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [Duplicate entry 'LSP345SPA' for key 'socio.UKtox6grm7ohkl1mrr70yb2fyan'] [insert into socio (codice_fiscale,cognome,email,nome) values (?,?,?,?)]; SQL [insert into socio (codice_fiscale,cognome,email,nome) values (?,?,?,?)]; constraint [socio.UKtox6grm7ohkl1mrr70yb2fyan]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:294) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:256) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165) ~[spring-data-jpa-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.8.jar:6.2.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy103.save(Unknown Source) ~[na:na]
+	at com.betacom.jpa.services.implementations.SocioImpl.insert(SocioImpl.java:37) ~[classes/:na]
+	at com.betacom.jpa.process.MainProcess.Execute(MainProcess.java:27) ~[classes/:na]
+	at com.betacom.jpa.ProjectJpaApplication.lambda$0(ProjectJpaApplication.java:24) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772) ~[spring-boot-3.5.3.jar:3.5.3]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.3.jar:3.5.3]
+	at com.betacom.jpa.ProjectJpaApplication.main(ProjectJpaApplication.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.3.jar:3.5.3]
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [Duplicate entry 'LSP345SPA' for key 'socio.UKtox6grm7ohkl1mrr70yb2fyan'] [insert into socio (codice_fiscale,cognome,email,nome) values (?,?,?,?)]
+	at org.hibernate.dialect.MySQLDialect.lambda$buildSQLExceptionConversionDelegate$3(MySQLDialect.java:1245) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:116) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:47) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:95) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:682) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:293) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:274) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:324) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:394) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:308) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:136) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:177) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:95) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:79) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:761) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:745) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320) ~[spring-orm-6.2.8.jar:6.2.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy99.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:653) ~[spring-data-jpa-3.5.1.jar:3.5.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.8.jar:6.2.8]
+	... 31 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'LSP345SPA' for key 'socio.UKtox6grm7ohkl1mrr70yb2fyan'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:990) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1168) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1103) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1450) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1086) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.0.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	... 77 common frames omitted
+
+2025-07-22T12:56:08.400+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T12:56:08.410+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T12:56:08.431+02:00  INFO 13964 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T12:56:59.278+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 11692 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T12:56:59.282+02:00 DEBUG 11692 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T12:56:59.285+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T12:56:59.372+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T12:57:00.264+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T12:57:00.377+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 1 JPA repository interface.
+2025-07-22T12:57:01.186+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T12:57:01.955+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6907e53d
+2025-07-22T12:57:01.959+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T12:57:02.051+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T12:57:02.260+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T12:57:02.344+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T12:57:02.973+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T12:57:03.159+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T12:57:04.511+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T12:57:04.552+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T12:57:05.274+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T12:57:05.320+02:00  INFO 11692 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 6.869 seconds (process running for 8.364)
+2025-07-22T12:57:05.334+02:00 DEBUG 11692 --- [ProjectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, cognome=Saporiti, nome=Luca, codiceFiscale=LSP345SPA, email=l.sapo@proton.me)
+2025-07-22T12:57:05.650+02:00 DEBUG 11692 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : After insert
+2025-07-22T12:57:05.668+02:00  INFO 11692 --- [ProjectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T12:57:05.678+02:00  INFO 11692 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T12:57:05.691+02:00  INFO 11692 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T12:58:09.283+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 5356 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T12:58:09.287+02:00 DEBUG 5356 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T12:58:09.289+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T12:58:09.420+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T12:58:10.230+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T12:58:10.336+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 1 JPA repository interface.
+2025-07-22T12:58:11.080+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T12:58:11.718+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5998bbc8
+2025-07-22T12:58:11.721+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T12:58:11.812+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T12:58:11.931+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T12:58:12.002+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T12:58:12.624+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T12:58:12.878+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T12:58:14.250+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T12:58:14.329+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T12:58:14.968+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T12:58:15.017+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 6.496 seconds (process running for 8.013)
+2025-07-22T12:58:15.027+02:00 DEBUG 5356 --- [ProjectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, cognome=Saporiti, nome=Luca, codiceFiscale=LSP345SPA, email=l.sapo@proton.me)
+2025-07-22T12:58:15.841+02:00  WARN 5356 --- [ProjectJPA] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2025-07-22T12:58:15.841+02:00 ERROR 5356 --- [ProjectJPA] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'LSP345SPA' for key 'socio.UKtox6grm7ohkl1mrr70yb2fyan'
+2025-07-22T12:58:15.877+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-22T12:58:15.917+02:00 ERROR 5356 --- [ProjectJPA] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [Duplicate entry 'LSP345SPA' for key 'socio.UKtox6grm7ohkl1mrr70yb2fyan'] [insert into socio (codice_fiscale,cognome,email,nome) values (?,?,?,?)]; SQL [insert into socio (codice_fiscale,cognome,email,nome) values (?,?,?,?)]; constraint [socio.UKtox6grm7ohkl1mrr70yb2fyan]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:294) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:256) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165) ~[spring-data-jpa-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.8.jar:6.2.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy103.save(Unknown Source) ~[na:na]
+	at com.betacom.jpa.services.implementations.SocioImpl.insert(SocioImpl.java:37) ~[classes/:na]
+	at com.betacom.jpa.process.MainProcess.Execute(MainProcess.java:27) ~[classes/:na]
+	at com.betacom.jpa.ProjectJpaApplication.lambda$0(ProjectJpaApplication.java:24) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772) ~[spring-boot-3.5.3.jar:3.5.3]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.3.jar:3.5.3]
+	at com.betacom.jpa.ProjectJpaApplication.main(ProjectJpaApplication.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.3.jar:3.5.3]
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [Duplicate entry 'LSP345SPA' for key 'socio.UKtox6grm7ohkl1mrr70yb2fyan'] [insert into socio (codice_fiscale,cognome,email,nome) values (?,?,?,?)]
+	at org.hibernate.dialect.MySQLDialect.lambda$buildSQLExceptionConversionDelegate$3(MySQLDialect.java:1245) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:116) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:47) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:95) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:682) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:293) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:274) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:324) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:394) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:308) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:136) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:177) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:95) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:79) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:761) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:745) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320) ~[spring-orm-6.2.8.jar:6.2.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy99.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:653) ~[spring-data-jpa-3.5.1.jar:3.5.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.8.jar:6.2.8]
+	... 31 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'LSP345SPA' for key 'socio.UKtox6grm7ohkl1mrr70yb2fyan'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:990) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1168) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1103) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1450) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1086) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.0.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	... 77 common frames omitted
+
+2025-07-22T12:58:15.936+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T12:58:15.944+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T12:58:15.956+02:00  INFO 5356 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T13:01:30.643+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 6324 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T13:01:30.649+02:00 DEBUG 6324 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T13:01:30.651+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T13:01:30.715+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T13:01:31.694+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T13:01:31.838+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 1 JPA repository interface.
+2025-07-22T13:01:32.489+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T13:01:33.102+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@361a4ea4
+2025-07-22T13:01:33.106+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T13:01:33.162+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T13:01:33.253+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T13:01:33.312+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T13:01:33.878+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T13:01:34.038+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T13:01:35.296+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T13:01:35.341+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T13:01:35.892+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T13:01:35.938+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 5.998 seconds (process running for 7.173)
+2025-07-22T13:01:36.999+02:00  WARN 6324 --- [ProjectJPA] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2025-07-22T13:01:37.003+02:00 ERROR 6324 --- [ProjectJPA] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'LSP345SPA' for key 'socio.UKtox6grm7ohkl1mrr70yb2fyan'
+2025-07-22T13:01:37.027+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-22T13:01:37.055+02:00 ERROR 6324 --- [ProjectJPA] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [Duplicate entry 'LSP345SPA' for key 'socio.UKtox6grm7ohkl1mrr70yb2fyan'] [insert into socio (codice_fiscale,cognome,email,nome) values (?,?,?,?)]; SQL [insert into socio (codice_fiscale,cognome,email,nome) values (?,?,?,?)]; constraint [socio.UKtox6grm7ohkl1mrr70yb2fyan]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:294) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:256) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165) ~[spring-data-jpa-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.8.jar:6.2.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy103.save(Unknown Source) ~[na:na]
+	at com.betacom.jpa.services.implementations.SocioImpl.insert(SocioImpl.java:37) ~[classes/:na]
+	at com.betacom.jpa.process.MainProcess.Execute(MainProcess.java:27) ~[classes/:na]
+	at com.betacom.jpa.ProjectJpaApplication.lambda$0(ProjectJpaApplication.java:24) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772) ~[spring-boot-3.5.3.jar:3.5.3]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.3.jar:3.5.3]
+	at com.betacom.jpa.ProjectJpaApplication.main(ProjectJpaApplication.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.3.jar:3.5.3]
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [Duplicate entry 'LSP345SPA' for key 'socio.UKtox6grm7ohkl1mrr70yb2fyan'] [insert into socio (codice_fiscale,cognome,email,nome) values (?,?,?,?)]
+	at org.hibernate.dialect.MySQLDialect.lambda$buildSQLExceptionConversionDelegate$3(MySQLDialect.java:1245) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:116) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:47) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:95) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:682) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:293) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:274) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:324) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:394) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:308) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:136) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:177) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:95) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:79) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:761) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:745) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320) ~[spring-orm-6.2.8.jar:6.2.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy99.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:653) ~[spring-data-jpa-3.5.1.jar:3.5.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.8.jar:6.2.8]
+	... 31 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'LSP345SPA' for key 'socio.UKtox6grm7ohkl1mrr70yb2fyan'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:990) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1168) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1103) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1450) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1086) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.0.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	... 77 common frames omitted
+
+2025-07-22T13:01:37.074+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T13:01:37.082+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T13:01:37.098+02:00  INFO 6324 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T13:04:31.619+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 11172 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T13:04:31.626+02:00 DEBUG 11172 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T13:04:31.628+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T13:04:31.721+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T13:04:32.569+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T13:04:32.695+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 1 JPA repository interface.
+2025-07-22T13:04:33.329+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T13:04:34.198+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ebabcf6
+2025-07-22T13:04:34.201+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T13:04:34.286+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T13:04:34.398+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T13:04:34.504+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T13:04:35.128+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T13:04:35.299+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T13:04:36.670+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T13:04:36.724+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T13:04:37.319+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T13:04:37.361+02:00  INFO 11172 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 6.748 seconds (process running for 8.859)
+2025-07-22T13:04:37.370+02:00 DEBUG 11172 --- [ProjectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, cognome=Saporiti, nome=Luca, codiceFiscale=LSP345SPA, email=l.sapo@proton.me)
+2025-07-22T13:04:37.555+02:00 DEBUG 11172 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : After insert
+2025-07-22T13:04:37.569+02:00  INFO 11172 --- [ProjectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T13:04:37.574+02:00  INFO 11172 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T13:04:37.586+02:00  INFO 11172 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T14:37:01.680+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 10452 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T14:37:01.693+02:00 DEBUG 10452 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T14:37:01.694+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T14:37:01.791+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T14:37:02.772+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T14:37:02.908+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 1 JPA repository interface.
+2025-07-22T14:37:03.891+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T14:37:04.958+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7335301b
+2025-07-22T14:37:04.961+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T14:37:05.093+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T14:37:05.254+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T14:37:05.378+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T14:37:06.022+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T14:37:06.213+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T14:37:07.667+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T14:37:07.728+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T14:37:08.348+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T14:37:08.397+02:00  INFO 10452 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 7.61 seconds (process running for 8.925)
+2025-07-22T14:37:08.410+02:00 DEBUG 10452 --- [ProjectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, cognome=Saporiti, nome=Luca, codiceFiscale=LSP345SPA, email=l.sapo@proton.me)
+2025-07-22T14:37:08.675+02:00 DEBUG 10452 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : After insert
+2025-07-22T14:37:08.687+02:00  INFO 10452 --- [ProjectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T14:37:08.697+02:00  INFO 10452 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T14:37:08.727+02:00  INFO 10452 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T14:55:32.248+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 14168 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T14:55:32.257+02:00 DEBUG 14168 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T14:55:32.260+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T14:55:32.371+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T14:55:33.254+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T14:55:33.368+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 1 JPA repository interface.
+2025-07-22T14:55:34.070+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T14:55:34.770+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ab3214b
+2025-07-22T14:55:34.773+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T14:55:34.862+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T14:55:35.031+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T14:55:35.110+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T14:55:35.738+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T14:55:35.944+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T14:55:37.412+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T14:55:37.463+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T14:55:38.450+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T14:55:38.491+02:00  INFO 14168 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 7.073 seconds (process running for 8.545)
+2025-07-22T14:55:38.501+02:00 DEBUG 14168 --- [ProjectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, cognome=Saporiti, nome=Luca, codiceFiscale=LSP345SPA, email=l.sapo@proton.me)
+2025-07-22T14:55:38.803+02:00 ERROR 14168 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : Socio esistente in DB
+2025-07-22T14:55:38.804+02:00 DEBUG 14168 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : After insert
+2025-07-22T14:55:38.818+02:00  INFO 14168 --- [ProjectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T14:55:38.839+02:00  INFO 14168 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T14:55:38.852+02:00  INFO 14168 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T15:01:08.290+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 15748 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T15:01:08.302+02:00 DEBUG 15748 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T15:01:08.304+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T15:01:08.456+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T15:01:09.344+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T15:01:09.522+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151 ms. Found 1 JPA repository interface.
+2025-07-22T15:01:10.180+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T15:01:11.005+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a237e76
+2025-07-22T15:01:11.009+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T15:01:11.099+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T15:01:11.287+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T15:01:11.371+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T15:01:12.222+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T15:01:12.414+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T15:01:13.913+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T15:01:13.961+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T15:01:15.583+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T15:01:15.773+02:00  INFO 15748 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 8.43 seconds (process running for 10.278)
+2025-07-22T15:01:15.784+02:00 DEBUG 15748 --- [ProjectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, cognome=Saporiti, nome=Luca, codiceFiscale=LSP345SPA, email=l.sapo@proton.me)
+2025-07-22T15:01:16.400+02:00 ERROR 15748 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : Socio esistente in DB
+2025-07-22T15:01:16.406+02:00 DEBUG 15748 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : After insert
+2025-07-22T15:01:16.416+02:00  INFO 15748 --- [ProjectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T15:01:16.421+02:00  INFO 15748 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T15:01:16.429+02:00  INFO 15748 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T15:10:42.849+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 10108 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T15:10:42.857+02:00 DEBUG 10108 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T15:10:42.860+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T15:10:43.016+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T15:10:44.046+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T15:10:44.161+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 1 JPA repository interface.
+2025-07-22T15:10:44.766+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T15:10:45.587+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13683389
+2025-07-22T15:10:45.593+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T15:10:45.683+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T15:10:45.802+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T15:10:45.881+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T15:10:46.488+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T15:10:46.666+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T15:10:48.032+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T15:10:48.083+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T15:10:48.810+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T15:10:48.858+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 7.003 seconds (process running for 8.947)
+2025-07-22T15:10:48.867+02:00 DEBUG 10108 --- [ProjectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, cognome=Saporiti, nome=Luca, codiceFiscale=LSP345SPA, email=l.sapo@proton.me)
+2025-07-22T15:10:49.768+02:00  WARN 10108 --- [ProjectJPA] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1054, SQLState: 42S22
+2025-07-22T15:10:49.769+02:00 ERROR 10108 --- [ProjectJPA] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown column 'c1_0.socio_id' in 'where clause'
+2025-07-22T15:10:49.785+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-22T15:10:49.819+02:00 ERROR 10108 --- [ProjectJPA] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select c1_0.id,c1_0.data_certificato,s1_0.id,s1_0.codice_fiscale,s1_0.cognome,s1_0.email,s1_0.nome,c1_0.tipo_certificato from certificato_medico c1_0 left join socio s1_0 on s1_0.id=c1_0.socio_id where c1_0.socio_id=?] [Unknown column 'c1_0.socio_id' in 'where clause'] [n/a]; SQL [n/a]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:281) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:256) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560) ~[spring-orm-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136) ~[spring-data-jpa-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.8.jar:6.2.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy107.findByCodiceFiscale(Unknown Source) ~[na:na]
+	at com.betacom.jpa.services.implementations.SocioImpl.insert(SocioImpl.java:36) ~[classes/:na]
+	at com.betacom.jpa.process.MainProcess.Execute(MainProcess.java:29) ~[classes/:na]
+	at com.betacom.jpa.ProjectJpaApplication.lambda$0(ProjectJpaApplication.java:24) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772) ~[spring-boot-3.5.3.jar:3.5.3]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.3.jar:3.5.3]
+	at com.betacom.jpa.ProjectJpaApplication.main(ProjectJpaApplication.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.3.jar:3.5.3]
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select c1_0.id,c1_0.data_certificato,s1_0.id,s1_0.codice_fiscale,s1_0.cognome,s1_0.email,s1_0.nome,c1_0.tipo_certificato from certificato_medico c1_0 left join socio s1_0 on s1_0.id=c1_0.socio_id where c1_0.socio_id=?] [Unknown column 'c1_0.socio_id' in 'where clause'] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:66) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:269) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:172) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.<init>(JdbcValuesResultSetImpl.java:74) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.resolveJdbcValuesSource(JdbcSelectExecutorStandardImpl.java:355) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:137) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:102) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.executeQuery(JdbcSelectExecutor.java:91) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:165) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.loader.ast.internal.SingleUniqueKeyEntityLoaderStandard.load(SingleUniqueKeyEntityLoaderStandard.java:128) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2785) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2777) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.results.graph.entity.internal.EntitySelectFetchByUniqueKeyInitializer.initialize(EntitySelectFetchByUniqueKeyInitializer.java:58) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.results.graph.entity.internal.EntitySelectFetchInitializer.resolveInstance(EntitySelectFetchInitializer.java:153) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.results.graph.entity.internal.EntitySelectFetchInitializer.resolveInstance(EntitySelectFetchInitializer.java:44) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:239) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:141) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.read(ListResultsConsumer.java:249) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:201) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:35) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:224) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:102) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.executeQuery(JdbcSelectExecutor.java:91) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:165) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$1(ConcreteSqmSelectQueryPlan.java:152) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:442) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:362) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:380) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:143) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:275) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:419) ~[spring-orm-6.2.8.jar:6.2.8]
+	at jdk.proxy4/jdk.proxy4.$Proxy114.getSingleResult(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:224) ~[spring-data-jpa-3.5.1.jar:3.5.1]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:93) ~[spring-data-jpa-3.5.1.jar:3.5.1]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:160) ~[spring-data-jpa-3.5.1.jar:3.5.1]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:148) ~[spring-data-jpa-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:170) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-3.5.1.jar:3.5.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.8.jar:6.2.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.8.jar:6.2.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.8.jar:6.2.8]
+	... 31 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'c1_0.socio_id' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:990) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1058) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-6.3.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.0.jar:na]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:251) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	... 78 common frames omitted
+
+2025-07-22T15:10:49.839+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T15:10:49.847+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T15:10:49.866+02:00  INFO 10108 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T15:12:47.243+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 11344 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T15:12:47.249+02:00 DEBUG 11344 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T15:12:47.257+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T15:12:47.339+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T15:12:48.188+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T15:12:48.302+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 1 JPA repository interface.
+2025-07-22T15:12:48.962+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T15:12:49.672+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d46a776
+2025-07-22T15:12:49.676+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T15:12:49.766+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T15:12:49.914+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T15:12:50.011+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T15:12:51.084+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T15:12:51.338+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T15:12:53.164+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T15:12:53.243+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T15:12:54.225+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T15:12:54.260+02:00  INFO 11344 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 7.882 seconds (process running for 9.195)
+2025-07-22T15:12:54.272+02:00  INFO 11344 --- [ProjectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T15:12:54.279+02:00  INFO 11344 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T15:12:54.313+02:00  INFO 11344 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T15:25:46.233+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 8788 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T15:25:46.236+02:00 DEBUG 8788 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T15:25:46.238+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T15:25:46.349+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T15:25:47.155+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T15:25:47.273+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 1 JPA repository interface.
+2025-07-22T15:25:47.930+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T15:25:48.644+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73818980
+2025-07-22T15:25:48.649+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T15:25:48.721+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T15:25:48.865+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T15:25:48.945+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T15:25:49.563+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T15:25:49.738+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T15:25:51.225+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T15:25:51.270+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T15:25:52.064+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T15:25:52.104+02:00  INFO 8788 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 6.745 seconds (process running for 8.179)
+2025-07-22T15:25:52.131+02:00  INFO 8788 --- [ProjectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T15:25:52.139+02:00  INFO 8788 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T15:25:52.157+02:00  INFO 8788 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T15:59:37.942+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 12312 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T15:59:37.953+02:00 DEBUG 12312 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T15:59:37.955+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T15:59:38.127+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T15:59:39.261+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T15:59:39.453+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 175 ms. Found 2 JPA repository interfaces.
+2025-07-22T15:59:40.359+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T15:59:41.070+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ac406a3
+2025-07-22T15:59:41.076+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T15:59:41.165+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T15:59:41.310+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T15:59:41.404+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T15:59:42.181+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T15:59:42.398+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T15:59:43.953+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T15:59:44.001+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T15:59:44.927+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T15:59:44.977+02:00  INFO 12312 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 8.198 seconds (process running for 10.144)
+2025-07-22T15:59:45.001+02:00  INFO 12312 --- [ProjectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T15:59:45.006+02:00  INFO 12312 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T15:59:45.026+02:00  INFO 12312 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T16:00:51.362+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 13716 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T16:00:51.366+02:00 DEBUG 13716 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T16:00:51.375+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T16:00:51.461+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T16:00:52.265+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T16:00:52.384+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces.
+2025-07-22T16:00:53.019+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T16:00:53.665+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@553ff983
+2025-07-22T16:00:53.670+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T16:00:53.757+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T16:00:53.900+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T16:00:53.995+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T16:00:54.591+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T16:00:54.774+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T16:00:56.254+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T16:00:56.296+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T16:00:57.228+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T16:00:57.268+02:00  INFO 13716 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 6.711 seconds (process running for 8.202)
+2025-07-22T16:00:57.284+02:00 DEBUG 13716 --- [ProjectJPA] [restartedMain] c.b.j.s.implementations.SocioImpl        : Insert: SocioReq(id=null, cognome=Saporiti, nome=Luca, codiceFiscale=LSP345SPA, email=l.sapo@proton.me)
+2025-07-22T16:00:57.688+02:00 DEBUG 13716 --- [ProjectJPA] [restartedMain] c.b.j.s.implementations.CertificatoImpl  : Create: CertificatoReq(id=null, tipo=false, dataCertificato=2025-07-22, socioId=9)
+2025-07-22T16:00:57.732+02:00 DEBUG 13716 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : After insert
+2025-07-22T16:00:57.745+02:00  INFO 13716 --- [ProjectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T16:00:57.752+02:00  INFO 13716 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T16:00:57.780+02:00  INFO 13716 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T16:23:59.803+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 14996 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T16:23:59.812+02:00 DEBUG 14996 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T16:23:59.817+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T16:24:00.068+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T16:24:01.747+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T16:24:02.070+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 296 ms. Found 2 JPA repository interfaces.
+2025-07-22T16:24:03.224+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T16:24:04.664+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73f0d657
+2025-07-22T16:24:04.669+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T16:24:04.878+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T16:24:05.162+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T16:24:05.391+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T16:24:06.330+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T16:24:06.576+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T16:24:08.843+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T16:24:08.927+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T16:24:10.070+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T16:24:10.125+02:00  INFO 14996 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 12.095 seconds (process running for 14.602)
+2025-07-22T16:24:10.450+02:00 DEBUG 14996 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : SocioDTO(id=9, cognome=Saporiti, nome=Luca, codiceFiscale=LSP345SPA, email=l.sapo@proton.me, certificatoDTO=CertificatoDTO(id=1, tipo=false, dataCertificato=2025-07-22))
+2025-07-22T16:24:10.452+02:00 DEBUG 14996 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : Ending project
+2025-07-22T16:24:10.464+02:00  INFO 14996 --- [ProjectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T16:24:10.468+02:00  INFO 14996 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T16:24:10.486+02:00  INFO 14996 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T16:38:31.920+02:00  INFO 864 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 864 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T16:38:31.926+02:00 DEBUG 864 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T16:38:31.929+02:00  INFO 864 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T16:38:32.078+02:00  INFO 864 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T16:38:33.620+02:00  INFO 864 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T16:38:33.904+02:00  INFO 864 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 260 ms. Found 2 JPA repository interfaces.
+2025-07-22T16:38:35.240+02:00  INFO 864 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T16:38:36.978+02:00  INFO 864 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@553ff983
+2025-07-22T16:38:36.985+02:00  INFO 864 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T16:38:37.163+02:00  INFO 864 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T16:38:37.464+02:00  INFO 864 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T16:38:37.616+02:00  INFO 864 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T16:38:38.711+02:00  INFO 864 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T16:38:39.143+02:00  INFO 864 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T16:38:42.755+02:00  INFO 864 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T16:38:42.897+02:00  INFO 864 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T16:38:44.833+02:00  INFO 864 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T16:38:44.914+02:00  INFO 864 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 14.284 seconds (process running for 16.426)
+2025-07-22T16:38:45.551+02:00 DEBUG 864 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : SocioDTO(id=9, cognome=Saporiti, nome=Luca, codiceFiscale=LSP345SPA, email=l.sapo@proton.me, certificatoDTO=CertificatoDTO(id=1, tipo=false, dataCertificato=2025-07-22))
+2025-07-22T16:38:45.558+02:00 DEBUG 864 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : Ending project
+2025-07-22T16:38:45.600+02:00  INFO 864 --- [ProjectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T16:38:45.611+02:00  INFO 864 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T16:38:45.645+02:00  INFO 864 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-22T16:49:24.186+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Starting ProjectJpaApplication using Java 21.0.6 with PID 15800 (C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA\target\classes started by Betacom in C:\Users\Betacom\eclipse-workspace\settimana5\ProjectJPA)
+2025-07-22T16:49:24.190+02:00 DEBUG 15800 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T16:49:24.193+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T16:49:24.292+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22T16:49:26.077+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T16:49:26.286+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 174 ms. Found 2 JPA repository interfaces.
+2025-07-22T16:49:27.456+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T16:49:28.349+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28070f23
+2025-07-22T16:49:28.358+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T16:49:28.470+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T16:49:28.630+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T16:49:28.733+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T16:49:29.658+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T16:49:29.908+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T16:49:31.899+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-22T16:49:32.011+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T16:49:33.411+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-22T16:49:33.454+02:00  INFO 15800 --- [ProjectJPA] [restartedMain] com.betacom.jpa.ProjectJpaApplication    : Started ProjectJpaApplication in 10.27 seconds (process running for 11.747)
+2025-07-22T16:49:33.749+02:00 DEBUG 15800 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : SocioDTO(id=9, cognome=Saporiti, nome=Luca, codiceFiscale=LSP345SPA, email=l.sapo@proton.me, certificatoDTO=CertificatoDTO(id=1, tipo=false, dataCertificato=2025-07-22))
+2025-07-22T16:49:33.754+02:00 DEBUG 15800 --- [ProjectJPA] [restartedMain] com.betacom.jpa.process.MainProcess      : Ending project
+2025-07-22T16:49:33.771+02:00  INFO 15800 --- [ProjectJPA] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T16:49:33.777+02:00  INFO 15800 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-22T16:49:33.803+02:00  INFO 15800 --- [ProjectJPA] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
