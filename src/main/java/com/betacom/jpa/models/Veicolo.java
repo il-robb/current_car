@@ -34,6 +34,9 @@ public class Veicolo {
 	@JoinColumn (name="id_categoria")
 	private Categoria categoria;
 	
+
+	@ManyToOne
+	@JoinColumn (name="id_alimentazione")
 	private Alimentazione alimentazione;
 
 	@ManyToOne

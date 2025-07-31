@@ -44,12 +44,19 @@ public class TipoVeicolo {
 	
 
 	@ManyToMany
-	@JoinColumn (name="tipi_alimentazione ")
 	@JoinTable(
-			name="abbonamento_attivita",
+			name="alimentazione_tipo_veicolo",
 			joinColumns = @JoinColumn(name = "id_tipo_veicolo"),
 			inverseJoinColumns =  @JoinColumn (name = "id_alimentazione")
 			)
 	private List<Alimentazione> alimentazione;
+	
+	@ManyToMany
+	@JoinTable(
+			name="categoria_tipo_veicolo",
+			joinColumns = @JoinColumn(name = "id_tipo_veicolo"),
+			inverseJoinColumns =  @JoinColumn (name = "id_categoria")
+			)
+	private List<Categoria> categoria;
 	
 }

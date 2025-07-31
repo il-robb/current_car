@@ -9,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -20,7 +21,6 @@ public class Alimentazione {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column (
-			nullable=false,
 			name="id_alimentazione"
 			)
 	private Integer idAlimentazione;
@@ -29,6 +29,12 @@ public class Alimentazione {
 			nullable=false
 			)
 	private String descrizione;
+	
+	@OneToMany(
+			mappedBy = "alimentazione",
+			fetch = FetchType.EAGER
+			)
+	private List<Veicolo> veicolo;
 	
 	@ManyToMany(
 			mappedBy = "alimentazione",

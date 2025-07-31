@@ -5,9 +5,10 @@ import java.util.List;
 import com.betacom.jpa.dto.VeicoloDTO;
 import com.betacom.jpa.exception.AcademyException;
 import com.betacom.jpa.request.MacchinaReq;
+import com.betacom.jpa.request.VeicoloReq;
 
 public interface IMacchinaService {
-	void create(MacchinaReq CarReq) throws AcademyException;
+	void create(MacchinaReq CarReq,VeicoloReq veiReq) throws AcademyException;
 	
 	List<VeicoloDTO> listAllCar() throws AcademyException;
 	

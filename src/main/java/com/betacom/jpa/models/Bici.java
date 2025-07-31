@@ -1,7 +1,5 @@
 package com.betacom.jpa.models;
 
-import com.betacom.jpa.dto.SospensioneDTO;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

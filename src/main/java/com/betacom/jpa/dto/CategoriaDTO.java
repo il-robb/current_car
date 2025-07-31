@@ -9,7 +9,7 @@ import lombok.Setter;
 @Builder
 public class CategoriaDTO {
 
-	private String idCategoria;
+	private Integer idCategoria;
 	private String descrizione;
 	
 }

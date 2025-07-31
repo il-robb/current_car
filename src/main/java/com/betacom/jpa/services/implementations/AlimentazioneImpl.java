@@ -10,7 +10,6 @@ import com.betacom.jpa.dto.AlimentazioneDTO;
 import com.betacom.jpa.exception.AcademyException;
 import com.betacom.jpa.models.Alimentazione;
 import com.betacom.jpa.reporitories.IAlimentazioneRepository;
-import com.betacom.jpa.reporitories.ITipoVeicoloRepository;
 import com.betacom.jpa.request.AlimentazioneReq;
 import com.betacom.jpa.services.interfaces.IAlimentazioneService;
 
@@ -18,7 +17,6 @@ import com.betacom.jpa.services.interfaces.IAlimentazioneService;
 public class AlimentazioneImpl implements IAlimentazioneService{
 
 	private IAlimentazioneRepository aliR;
-	private ITipoVeicoloRepository tipoVeicoloR;
 	
 	public AlimentazioneImpl(IAlimentazioneRepository aliR) {
 		super();
@@ -28,13 +26,9 @@ public class AlimentazioneImpl implements IAlimentazioneService{
 	@Override
 	public void create(AlimentazioneReq aliReq) throws AcademyException {
 		Optional<Alimentazione> a = aliR.findByDescrizione(aliReq.getDescrizione());  
-		if(a.isPresent())throw new AcademyException("questo tipo di alimentazione esiste gia :"+aliReq.getDescrizione());
-//		
-//		Optional<TipoVeicolo> tv= tipoVeicoloR.findByDescrizione(aliReq.getTipoveicolo());
-//		if(tv.isEmpty()) throw new AcademyException("tipo di veicolo inesistente :"+alireq);		
+		if(a.isPresent())throw new AcademyException("questo tipo di alimentazione esiste gia :"+aliReq.getDescrizione());	
 		Alimentazione ali = new Alimentazione();
 		ali.setDescrizione(aliReq.getDescrizione());
-//		ali.setIdAlimentazione(aliReq.getIdAlimentazione());
 		
 		aliR.save(ali);
 	}

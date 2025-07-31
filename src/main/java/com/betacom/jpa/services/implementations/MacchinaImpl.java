@@ -12,9 +12,18 @@ import com.betacom.jpa.dto.VeicoloDTO;
 import com.betacom.jpa.exception.AcademyException;
 import com.betacom.jpa.models.Macchina;
 import com.betacom.jpa.models.Veicolo;
+import com.betacom.jpa.reporitories.IAlimentazioneRepository;
+import com.betacom.jpa.reporitories.IBiciRepository;
+import com.betacom.jpa.reporitories.ICategoriaRepository;
+import com.betacom.jpa.reporitories.IColoreRepository;
 import com.betacom.jpa.reporitories.IMacchinaRepository;
+import com.betacom.jpa.reporitories.IMarcaRepository;
+import com.betacom.jpa.reporitories.IMotoRepository;
+import com.betacom.jpa.reporitories.ISospensioneRepository;
+import com.betacom.jpa.reporitories.ITipoVeicoloRepository;
 import com.betacom.jpa.reporitories.IVeicoloRepository;
 import com.betacom.jpa.request.MacchinaReq;
+import com.betacom.jpa.request.VeicoloReq;
 import com.betacom.jpa.services.interfaces.IMacchinaService;
 
 import lombok.extern.log4j.Log4j2;
@@ -23,21 +32,39 @@ import lombok.extern.log4j.Log4j2;
 @Log4j2
 public class MacchinaImpl implements IMacchinaService{
 	
-	private IMacchinaRepository carR;
 	private IVeicoloRepository veiR;
-	
+	private IMotoRepository motoR;
+	private IMacchinaRepository carR;
+	private IBiciRepository biciR;
+	private IAlimentazioneRepository aliR;
+	private ICategoriaRepository catR;
+	private IColoreRepository colR;
+	private IMarcaRepository marcaR;
+	private ITipoVeicoloRepository tipoR;
+	private ISospensioneRepository sospR;
 
 	
 
-	public MacchinaImpl(IMacchinaRepository carR, IVeicoloRepository veiR) {
+	public MacchinaImpl(IVeicoloRepository veiR, IMotoRepository motoR, IMacchinaRepository carR, IBiciRepository biciR,
+			IAlimentazioneRepository aliR, ICategoriaRepository catR, IColoreRepository colR, IMarcaRepository marcaR,
+			ITipoVeicoloRepository tipoR, ISospensioneRepository sospR) {
 		super();
-		this.carR = carR;
 		this.veiR = veiR;
+		this.motoR = motoR;
+		this.carR = carR;
+		this.biciR = biciR;
+		this.aliR = aliR;
+		this.catR = catR;
+		this.colR = colR;
+		this.marcaR = marcaR;
+		this.tipoR = tipoR;
+		this.sospR = sospR;
 	}
 
 	@Override
 	@Transactional(rollbackFor = Exception.class)
-	public void create(MacchinaReq carReq) throws AcademyException {
+	public void create(MacchinaReq carReq,VeicoloReq veiReq) throws AcademyException {
+		
 		Optional<Macchina> m = carR.findByTarga(carReq.getTarga());
 		if(m.isPresent()) throw new AcademyException("macchina con targa :"+carReq.getTarga()+" è gia esistente ");
 		
@@ -45,8 +72,16 @@ public class MacchinaImpl implements IMacchinaService{
 		c.setCilindrata(carReq.getCilindrata());
 		c.setNumeroPorte(carReq.getNumeroPorte());
 		c.setTarga(carReq.getTarga());
-		
 		carR.save(c);
+		
+		VeicoloImpl veiImpl= new VeicoloImpl(veiR, motoR, carR, biciR, aliR, catR, colR, marcaR, tipoR, sospR);
+		veiImpl.create(veiReq);
+		
+		List<Veicolo> lv = veiR.findAll();
+        Veicolo v = lv.getLast();
+        v.setMacchina(carR.findByTarga(carReq.getTarga()).get());
+        veiR.save(v);
+		
 	}
 	
 	@Override
