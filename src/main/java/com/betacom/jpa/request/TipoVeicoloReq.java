@@ -8,9 +8,7 @@ public class TipoVeicoloReq {
 	private Integer idTipoVeicolo;
 	
 	private String descrizione;
-	
-	private String pattern;
-	
+		
 	private String tipoAlimentazione;
 	
 }

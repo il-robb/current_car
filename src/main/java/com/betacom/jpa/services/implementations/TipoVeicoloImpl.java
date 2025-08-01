@@ -69,7 +69,6 @@ public class TipoVeicoloImpl implements ITipoVeicoloService{
 		
 		TipoVeicolo tipov = new TipoVeicolo();
 		tipov.setDescrizione(tipoReq.getDescrizione());
-		tipov.setPattern(tipoReq.getPattern());
 		
 		tipoR.save(tipov);
 		

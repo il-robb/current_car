@@ -65,6 +65,7 @@ public class MacchinaImpl implements IMacchinaService{
 	@Transactional(rollbackFor = Exception.class)
 	public void create(MacchinaReq carReq,VeicoloReq veiReq) throws AcademyException {
 		
+		log.debug("dati carReq: "+carReq);
 		Optional<Macchina> m = carR.findByTarga(carReq.getTarga());
 		if(m.isPresent()) throw new AcademyException("macchina con targa :"+carReq.getTarga()+" è gia esistente ");
 		
@@ -72,23 +73,28 @@ public class MacchinaImpl implements IMacchinaService{
 		c.setCilindrata(carReq.getCilindrata());
 		c.setNumeroPorte(carReq.getNumeroPorte());
 		c.setTarga(carReq.getTarga());
-		carR.save(c);
+		Integer id =carR.save(c).getIdMacchina();
+		c.setIdMacchina(id);
 		
 		VeicoloImpl veiImpl= new VeicoloImpl(veiR, motoR, carR, biciR, aliR, catR, colR, marcaR, tipoR, sospR);
 		veiImpl.create(veiReq);
 		
 		List<Veicolo> lv = veiR.findAll();
         Veicolo v = lv.getLast();
-        v.setMacchina(carR.findByTarga(carReq.getTarga()).get());
+        c.setVeicolo(v);
+        carR.save(c);
+        v.setMacchina(c);
+        
         veiR.save(v);
 		
 	}
 	
 	@Override
 	public List<VeicoloDTO> listAllCar() throws AcademyException{
-		List<Veicolo> lV = veiR.findAll();
+		List<Veicolo> lV = veiR.findAllByDescrizione("macchina");
+				
+				
 		return lV.stream()
-				.filter(a->a.getTipoVeicolo().getDescrizione().equalsIgnoreCase("macchina"))
 				.map(b->VeicoloDTO.builder()
 						.idVeicolo(b.getIdVeicolo())
 						.alimentazione(b.getAlimentazione().getDescrizione())

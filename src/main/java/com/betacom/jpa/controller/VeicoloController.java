@@ -14,6 +14,15 @@ public class VeicoloController {
 
 	private IVeicoloServices veiS;
 	
+	
+	
+	public VeicoloController(IVeicoloServices veiS) {
+		super();
+		this.veiS = veiS;
+	}
+
+
+
 	@GetMapping("/listAll")
 	public ResponseList<VeicoloDTO> listAll(){
 		 ResponseList<VeicoloDTO> r = new  ResponseList<VeicoloDTO>();

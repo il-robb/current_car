@@ -12,8 +12,13 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name="categoria")
 public class Categoria {
@@ -35,11 +40,16 @@ public class Categoria {
 			mappedBy = "categoria",
 			fetch = FetchType.EAGER
 			)
+	@ToString.Exclude
 	private List<Veicolo> veicolo;
 	
 	@ManyToMany(
 			mappedBy = "categoria",
 			fetch = FetchType.EAGER
 			)
+	@ToString.Exclude
 	private List<TipoVeicolo> tipoVeicolo;
+
+	
+	
 }

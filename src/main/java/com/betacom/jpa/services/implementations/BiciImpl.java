@@ -47,7 +47,8 @@ public class BiciImpl implements IBiciService{
 	}
 	@Override
 	public List<VeicoloDTO> listAllBici() throws AcademyException{
-		List<Veicolo> lV = veiR.findAll();
+		List<Veicolo> lV = veiR.findAllByDescrizione("bici");
+		
 		return lV.stream()
 				.filter(a->a.getTipoVeicolo().getDescrizione().equalsIgnoreCase("macchina"))
 				.map(b->VeicoloDTO.builder()

@@ -118,7 +118,7 @@ public class VeicoloImpl implements IVeicoloServices{
 		MacchinaImpl mI = new MacchinaImpl(veiR, motoR, carR, biciR, aliR, catR, colR, marcaR, tipoR, sospR);
 		lTot.addAll(mI.listAllCar());
 
-		MotoImpl motoI = new MotoImpl(motoR,veiR);
+		MotoImpl motoI = new MotoImpl(veiR, motoR, carR, biciR, aliR, catR, colR, marcaR, tipoR, sospR);
 		lTot.addAll(motoI.listAllMoto());
 		
 		BiciImpl bI = new BiciImpl(biciR,veiR,sospR);

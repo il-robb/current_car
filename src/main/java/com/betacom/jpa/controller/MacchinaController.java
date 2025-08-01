@@ -7,27 +7,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.betacom.jpa.dto.VeicoloDTO;
-import com.betacom.jpa.request.MacchinaReq;
-import com.betacom.jpa.request.VeicoloReq;
+import com.betacom.jpa.request.MacchinaVeicoloReq;
 import com.betacom.jpa.response.ResponseBase;
 import com.betacom.jpa.response.ResponseList;
 import com.betacom.jpa.services.interfaces.IMacchinaService;
+import com.betacom.jpa.services.interfaces.IVeicoloServices;
 
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
 @RestController
 @RequestMapping("/rest/macchina")
 public class MacchinaController {
 	private IMacchinaService carS;
-
-	public MacchinaController(IMacchinaService carS) {
+	private IVeicoloServices veiS;
+	
+	
+	
+	public MacchinaController(IMacchinaService carS, IVeicoloServices veiS) {
 		super();
 		this.carS = carS;
+		this.veiS = veiS;
 	}
-	
-	@PostMapping("/create")
-	public ResponseBase create(@RequestBody (required = true)  VeicoloReq datiVeicolo,@RequestBody (required = false)  MacchinaReq datiMacchina){
-		 ResponseBase r = new  ResponseBase();
+
+	@PostMapping("/create")//,@RequestBody (required = false) MacchinaReq datiMacchina
+	public ResponseBase create(@RequestBody (required = true)  MacchinaVeicoloReq datiVeicolo){
+		ResponseBase r = new  ResponseBase();
 		try {
-			carS.create(datiMacchina,datiVeicolo);
+			carS.create(datiVeicolo.getDatiMacchina(),datiVeicolo.getDatiVeicolo());
 			r.setRc(true);
 		} catch (Exception e) {
 			r.setRc(false);

@@ -17,10 +17,6 @@ import com.betacom.jpa.services.interfaces.IcategoriaService;
 public class CategoriaImpl implements IcategoriaService{
 
 	private ICategoriaRepository cateR;
-	
-	
-	
-	
 
 	public CategoriaImpl(ICategoriaRepository cateR) {
 		super();
