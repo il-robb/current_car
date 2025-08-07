@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">	<title>JPA</title>
+</head>
+<body>
+<nav th:insert="~{fragments/navigation :: block-navigation('Elenco abbonamenti per socio')}"></nav>
+	<div align="center" class="container">
+		<input type="text" th:value="${socioId}">
+		<table class="table table-stripped">
+			<thead>
+				<tr align="center">
+					<th>Data iscrizione</th>
+					<th>Attività</th>
+					<th>
+						<a th:href="@{createAbbonamento(socioId=${socioId})}" class="btn btn-primary">Nuovo abbonamento</a>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="abb : ${listAbb}">
+					<td th:text="${abb.dataIscrizione}"></td>
+					<td align="center">
+						<ul class="list-unstyled">
+							<li th:each="att : ${abb.attivita}">
+								<span th:text="${att.descrizione + ' - ' + att.prezzo + '€'}"></span>
+							</li>
+							<a th:href="@{aggiungiAttivita(abbonamentoId=${abb.id})}" class="btn btn-primary">Aggiungi attività</a>
+						</ul>
+					
+					</td>
+				</tr>
+			
+			</tbody>
+		</table>
+	
+	
+	</div>
+
+</body>
+</html>
