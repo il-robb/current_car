@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">	<title>JPA</title>
+</head>
+<body>
+<nav th:insert="~{fragments/navigation :: block-navigation('Elenco abbonamenti per socio')}"></nav>
+	<div align="center" class="container">
+	
+		<input type="text" th:value="${socioId}">
+		<table class="table table-stripped">
+			<thead>
+				<tr align="center">
+					<th>Data iscrizione</th>
+					<th>Attività</th>
+					<th>
+						<a th:href="@{createAbbonamento(socioId=${socioId})}" class="btn btn-primary">Nuovo abbonamento</a>
+					</th>
+				</tr>
+			</thead>
+				<tbody>
+			
+					<tr th:each="abb : ${listAbb}">
+						<td align="center" th:text="${abb.dataIscrizione}"></td>
+						<td align="center">
+							<ul class="list-unstyled">
+								<li th:each="att : ${abb.attivita}">
+	    							<span th:text="${att.descrizione + ' - ' + att.prezzo + '€'}"></span>
+						    		<form th:action="@{deleteAttivita}" method="post" 
+						          		onsubmit="return confermaEliminazione()">
+								        <input type="hidden" name="attivitaId" th:value="${att.id}" />
+								        <input type="hidden" name="abbonamentoId" th:value="${abb.id}" />
+								        <input type="hidden" name="socioId" th:value="${socioId}" />
+								        <button type="submit" class="btn btn-danger btn-sm ms-2">Elimina</button>
+								    </form>
+								</li>
+
+							<br>
+							<a href="#" class="btn btn-primary"
+   										th:attr="idAbb=${abb.id}"
+   										onclick="mostraSelect(this)">Aggiungi attività</a>
+   							
+							<td th:attr="id='select-td-' + ${abb.id}" class="d-none" align="left">
+
+							<form method="get" th:action="@{/createAttivita}">
+    						<input type="hidden" name="abbonamentoId" th:value="${abb.id}" />
+    						<input type="hidden" name="socioId" th:value="${socioId}" />
+    
+    						<select class="form-select" name="attivitaId" required>
+        					<option value="" selected>Seleziona attività</option>
+        					<option th:each="att : ${listAttivita.dati}"
+                					th:value="${att.id}"
+                					th:text="${att.descrizione}">
+        					</option>
+    						</select>
+    
+    						<button type="submit" class="btn btn-primary mt-1">Salva nuova attività</button>
+    						<div class="container-error mt-2" th:if="*{errMessage} != null">
+    						<span th:text="*{errMessage}" style="color:red">*</span>
+							</div>
+    						
+							</form>
+			
+							</td>
+
+						</ul>
+
+					</td>
+					
+					
+				</tr>
+			
+			</tbody>
+		</table>
+	
+	
+	</div>
+	<script>
+		function mostraSelect(button) {
+		const abbonamentoId = button.getAttribute("idAbb");
+		const td = document.getElementById("select-td-" + abbonamentoId);
+		if (td) {
+			td.classList.remove("d-none");
+		}
+	}
+	</script>
+	
+	<script>
+	function mostraSelect(button) {
+		const abbonamentoId = button.getAttribute("idAbb");
+		const td = document.getElementById("select-td-" + abbonamentoId);
+		if (td) {
+			td.classList.remove("d-none");
+		}
+	}
+
+	function confermaEliminazione() {
+		return confirm("Sei sicuro di voler eliminare questa attività?");
+	}
+</script>
+	
+
+</body>
+</html>
