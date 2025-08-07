@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+	crossorigin="anonymous">
+<title>JPA</title>
+</head>
+<body>
+	<nav
+		th:insert="~{fragments/navigation :: block-navigation('Elenco abbonamenti per socio')}"></nav>
+
+	<div align="center" class="container">
+		<input type="hidden" th:value="${socioId}" />
+		<table class="table table-stipped">
+			<thead>
+				<tr align="center">
+					<th>Data iscrizione</th>
+					<th>Attivita</th>
+					<th><a th:href="@{createAbbonamento(socioId=${socioId})}"
+						class="btn btn-outline-primary">Crea nuovo abbonamento</a></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="abbo : ${listAbbonamenti}" th:attr="data-id=${abbo.id}"
+					style='cursor: pointer'>
+					<td th:text="${abbo.dataIscrizione}" align="center"></td>
+					<td align="center">
+						<ul class="list-unstyled">
+							<li th:each="att : ${abbo.attivita}"><span
+								th:text="${att.descrizione + ' '}"></span> <span
+								th:text="${att.prezzo}"></span></li>
+						</ul>
+						<button type="button" class="btn btn-primary"
+							data-bs-toggle="modal" data-bs-target="#exampleModal">
+							Aggiungi attività</button>
+
+						<div class="modal fade" id="exampleModal" tabindex="-1"
+							aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title fs-5" id="exampleModalLabel">
+											Aggiungi Attività</h1>
+										<button type="button" class="btn-close"
+											data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<form class="form-content" th:action="@{saveAttivita}"
+											th:object="${attivita}" method="post">
+											<table>
+												<tr>
+													<td><label for='id' class='form-label'>Id
+															attività: </label></td>
+													<td><input type="number" th:field="*{id}" name="id"
+														required placeholder="Arrampicata"></td>
+												</tr>
+												<tr>
+													<td><label for='abbonamentoId' class='form-label'>Id
+															Abbonamento: </label></td>
+													<td><input type="number" th:field="*{abbonamentoId}"
+														name="abbonamentoId" value="${abbo.id}" th:text="${abbo.id}">
+													</td>
+												</tr>
+											</table>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-bs-dismiss="modal">Chiudi</button>
+												<button type="submit" class="btn btn-primary">Salva</button>
+											</div>
+
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</td>
+				</tr>
+			</tbody>
+
+
+		</table>
+
+
+	</div>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
