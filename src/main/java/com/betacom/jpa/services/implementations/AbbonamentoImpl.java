@@ -179,11 +179,12 @@ public class AbbonamentoImpl extends Utilities implements IAbbonamentoServices{
 		if (ab.isEmpty()) {
 			throw new AcademyException("Abbonamento non trovato: " + req.getId());
 		}
+		/*
 		if (ab.get().getAttivita().isEmpty()) {
 			abboR.delete(ab.get());
 		} else {
 			throw new AcademyException("Impossibile eliminare abbonamento, attività presenti in questo abbonamento");
-		}
+		}*/
 	}
 	
 }

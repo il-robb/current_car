@@ -90,7 +90,7 @@ public class AttivitaController {
 		return a;
 	}
 	
-	@DeleteMapping("removeAttivitaAbbonamento")
+	@PostMapping("removeAttivitaAbbonamento")
 	public ResponseBase removeAttivitaAbbonamento(@RequestBody (required = true) AttivitaReq req) {
 		ResponseBase r = new ResponseBase();
 		try {

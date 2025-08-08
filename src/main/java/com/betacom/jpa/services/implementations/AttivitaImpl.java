@@ -104,6 +104,16 @@ public class AttivitaImpl implements IAttivitaServices{
 		if (at.isEmpty()) {
 			throw new AcademyException("Attività non trovata nel db: " +req.getId());
 		}
+		List<Abbonamento> listaAbbonamenti = abboR.findAll();
+        for (Abbonamento abbonamento : listaAbbonamenti) {
+            if(abbonamento.getId().equals(req.getAbbonamentoId())) {
+                for (Attivita attivita : abbonamento.getAttivita()) {
+                    if(attivita.getId().equals(req.getId())) {
+                        throw new AcademyException("attivita già presente nel abbonamento");
+                    }
+                }
+            }
+        }
 		ab.get().getAttivita().add(at.get());
 		abboR.save(ab.get());
 	}
